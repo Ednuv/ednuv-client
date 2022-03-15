@@ -1,0 +1,73 @@
+<app-header-style-four></app-header-style-four>
+
+<div class="page-title-area item-bg1">
+    <div class="container">
+        <div class="page-title-content">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li>My Dashboard</li>
+            </ul>
+            <h2>My Dashboard</h2>
+        </div>
+    </div>
+</div>
+
+<div class="my-dashboard-area ptb-100">
+    <div class="container">
+        <div class="myDashboard-profile">
+            <div class="row align-items-center">
+                <div class="col-lg-4 col-md-5">
+                    <div class="profile-image">
+                        <img src="assets/img/instructor/instructor1.jpg" alt="image">
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-7">
+                    <div class="profile-content">
+                        <h3>Raju</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore atque officiis maxime suscipit expedita obcaecati nulla in ducimus.</p>
+                        <ul class="contact-info">
+                            <li><i class='bx bx-envelope'></i> <a href="mailto:hello@jamesanderson.com">hello@jamesanderson.com</a></li>
+                            <li><i class='bx bx-phone'></i> <a href="tel:+502464674">{{user.phone}}</a></li>
+                            <li><i class='bx bx-world'></i> <a href="#" target="_blank">{{user.username}}</a></li>
+                        </ul>
+                        <ul class="social">
+                            <li><a href="#" class="d-block" target="_blank"><i class='bx bxl-facebook'></i></a></li>
+                            <li><a href="#" class="d-block" target="_blank"><i class='bx bxl-twitter'></i></a></li>
+                            <li><a href="#" class="d-block" target="_blank"><i class='bx bxl-instagram'></i></a></li>
+                            <li><a href="#" class="d-block" target="_blank"><i class='bx bxl-linkedin'></i></a></li>
+                            <li><a href="#" class="d-block" target="_blank"><i class='bx bxl-pinterest-alt'></i></a></li>
+                        </ul>
+                        <a routerLink="/" class="myDashboard-logout">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="myDashboard-navigation">
+            <ul>
+                <li><a routerLink="/admin-dashboard"><i class='bx bxs-dashboard'></i> Dashboard</a></li>
+                <li><a routerLink="/quiz" class="active"><i class='bx bx-cart'></i> Quiz</a></li>
+                <li><a routerLink="/downloads"><i class='bx bx-download'></i> Downloads</a></li>
+                <li><a routerLink="/edit-address"><i class='bx bx-home-alt'></i> Addresses</a></li>
+                <li><a routerLink="/edit-account"><i class='bx bx-edit'></i> Account Details</a></li>
+                <li><a routerLink="/"><i class='bx bx-log-out'></i> Logout</a></li>
+            </ul>
+            <div class="row">
+                <div class="col-md-3">
+                    <mat-card>
+                        <mat-action-list>
+                            <div mat-subheader>Menu </div>
+                            <button mat-list-item routerLink="/quiz/quizcategories"> <mat-icon mat-list-icon>home</mat-icon> Add Categies</button>
+                            <button mat-list-item routerLink="/quiz/quizzes"> <mat-icon mat-list-icon>account_circle</mat-icon> Add Quiz</button>
+                            <button mat-list-item routerLink="/quiz/quizview"> <mat-icon mat-list-icon>account_circle</mat-icon> View Quiz</button>
+                            <button mat-list-item routerLink="/quiz/quizquestions"> <mat-icon mat-list-icon>folder</mat-icon> Add Questions</button>
+                        </mat-action-list>
+                    </mat-card>
+                </div>
+                <div class="col-md-9">
+                    <router-outlet></router-outlet>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

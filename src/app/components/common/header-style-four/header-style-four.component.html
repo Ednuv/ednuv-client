@@ -1,0 +1,105 @@
+<header class="header-area p-relative">
+    <div class="navbar-area navbar-style-four" ngStickyNav stickyClass="sticky-box-shadow" ngStickyNav>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light" [class.active]="classApplied">
+                <a class="navbar-brand" routerLink="/"><img src="assets/img/black-logo.png" alt="logo"></a>
+                <button class="navbar-toggler" type="button" (click)="toggleClass()">
+                    <span class="burger-menu">
+                        <span class="top-bar"></span>
+                        <span class="middle-bar"></span>
+                        <span class="bottom-bar"></span>
+                    </span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a routerLink="/" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a></li>
+                        <li class="nav-item"><a href="javascript:void(0)" class="nav-link">Pages <i class='bx bx-chevron-down'></i></a>
+                            <ul class="dropdown-menu">
+                                <li class="nav-item"><a routerLink="/about-style-2" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">About</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link">Instructor <i class='bx bx-chevron-right'></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item"><a routerLink="/instructor-1" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Instructor Style 1</a></li>
+                                        <li class="nav-item"><a routerLink="/single-instructor" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Instructor Details</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item"><a routerLink="/gallery" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Gallery</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link">Events <i class='bx bx-chevron-right'></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item"><a routerLink="/events" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Events</a></li>
+                                        <li class="nav-item"><a routerLink="/single-events" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Events Details</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item"><a routerLink="/pricing" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Pricing</a></li>
+                                <li class="nav-item"><a routerLink="/feedback" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Feedback</a></li>
+                                <li class="nav-item"><a routerLink="/partner" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Partner</a></li>
+                                <li class="nav-item"><a routerLink="/login" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Log In</a></li>
+                                <li class="nav-item"><a routerLink="/register" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Register</a></li>
+                                <li class="nav-item"><a routerLink="/faqs" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">FAQ's</a></li>
+                                <li class="nav-item"><a routerLink="/error-404" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">404 Error</a></li>
+                                <li class="nav-item"><a routerLink="/coming-soon" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Coming Soon</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a href="javascript:void(0)" class="nav-link">Courses <i class='bx bx-chevron-down'></i></a>
+                            <ul class="dropdown-menu">
+                                <li class="nav-item"><a href="javascript:void(0)" class="nav-link">Courses Category <i class='bx bx-chevron-right'></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item"><a routerLink="/courses-category-style-3" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Category Style 3</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item"><a routerLink="/courses-list" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Courses List</a></li>
+                                <li class="nav-item"><a href="javascript:void(0)" class="nav-link">Courses Grid Style 1 <i class='bx bx-chevron-right'></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item"><a routerLink="/courses-2-columns-style-1" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">2 Columns</a></li>
+                                        <li class="nav-item"><a routerLink="/courses-3-columns-style-1" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">3 Columns</a></li>
+                                        <li class="nav-item"><a routerLink="/courses-4-columns-style-1" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">4 Columns Full Width</a></li>
+                                    </ul>
+                                </li>
+
+
+                                <li class="nav-item"><a routerLink="/single-courses" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Courses Details</a></li>
+                                <li class="nav-item"><a routerLink="/my-dashboard" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">My Dashboard</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a routerLink="/quiz-main" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Quiz</a></li>
+                        <li class="nav-item"><a routerLink="/blog-style-2" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Blog</a></li>
+                        <li class="nav-item"><a href="javascript:void(0)" class="nav-link">Shop <i class='bx bx-chevron-down'></i></a>
+                            <ul class="dropdown-menu">
+                                <li class="nav-item"><a routerLink="/shop-grid" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Shop Grid</a></li>
+                                <li class="nav-item"><a routerLink="/shop-grid-fullwidth" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Shop Grid FullWidth</a></li>
+                                <li class="nav-item"><a routerLink="/single-products" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Products Details</a></li>
+                                <li class="nav-item"><a routerLink="/cart" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Cart</a></li>
+                                <li class="nav-item"><a routerLink="/checkout" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Checkout</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a routerLink="/contact" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Contact</a></li>
+
+                    </ul>
+                    <a *ngIf="!isLoggedIn" routerLink="/login" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Login</a>
+                    <a *ngIf="!isLoggedIn" routerLink="/register" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Register</a>
+                    <a *ngIf="isLoggedIn" routerLink="/" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">{{user.firstName}}</a>
+                    <a (click)="logout()" *ngIf="isLoggedIn" routerLink="/" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Logout</a>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<div class="search-overlay" [class.active]="classApplied3">
+    <div class="d-table">
+        <div class="d-table-cell">
+            <div class="search-overlay-layer"></div>
+            <div class="search-overlay-layer"></div>
+            <div class="search-overlay-layer"></div>
+            <div class="search-overlay-close" (click)="toggleClass3()">
+                <span class="search-overlay-close-line"></span>
+                <span class="search-overlay-close-line"></span>
+            </div>
+            <div class="search-overlay-form">
+                <form>
+                    <input type="text" class="input-search" placeholder="Search here...">
+                    <button type="submit"><i class='bx bx-search-alt'></i></button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
