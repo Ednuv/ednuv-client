@@ -1,29 +1,30 @@
 .login-image {
-    height: 100%;
-    width: 100%;
+    height: auto;
+    width: auto;
     background: {
         image: url(../../../../assets/img/login-bg.jpg);
         position: center center;
         size: cover;
         repeat: no-repeat;
-    };
+    }
+    ;
     img {
-        display: none;
+        display: inline-block;
     }
 }
+
 .login-content {
     height: 100vh;
-    
     .login-form {
         text-align: center;
         max-width: 500px;
         margin: {
             left: auto;
             right: auto;
-        };
+        }
+        ;
         .logo {
             margin-bottom: 30px;
-            
             a {
                 display: inline-block;
             }
@@ -33,20 +34,21 @@
             font: {
                 size: 35px;
                 weight: 700;
-            };
+            }
+            ;
         }
         p {
             margin: {
                 top: 8px;
                 bottom: 0;
-            };
+            }
+            ;
             a {
                 display: inline-block;
             }
         }
         form {
             margin-top: 35px;
-
             .form-control {
                 background-color: var(--whiteColor);
                 color: var(--blackColor);
@@ -56,7 +58,8 @@
                 height: 55px;
                 font: {
                     size: var(--fontSize);
-                };
+                }
+                ;
                 &::placeholder {
                     transition: var(--transition);
                 }
@@ -80,12 +83,15 @@
                     style: solid;
                     color: var(--mainColor);
                     radius: 5px;
-                };
+                }
+                ;
                 font: {
                     size: 14.5px;
                     weight: 700;
-                };
-                &:hover, &:focus {
+                }
+                ;
+                &:hover,
+                &:focus {
                     background-color: var(--optionalColor);
                     color: var(--whiteColor);
                     border-color: var(--optionalColor);
@@ -97,12 +103,10 @@
             .forgot-password {
                 text-align: end;
                 margin-top: 20px;
-
                 a {
                     display: inline-block;
                     color: var(--mainColor);
                     text-decoration: underline;
-
                     &:hover {
                         color: var(--optionalColor);
                     }
@@ -110,7 +114,6 @@
             }
             .connect-with-social {
                 margin-top: 20px;
-
                 button {
                     display: block;
                     width: 100%;
@@ -135,7 +138,6 @@
                         border-color: #3b5998;
                         color: #3b5998;
                         box-shadow: 0px 5px 28.5px 1.5px rgba(59, 89, 152, 0.2);
-                        
                         &:hover {
                             background-color: #3b5998;
                             color: var(--whiteColor);
@@ -147,7 +149,6 @@
                         border-color: #1da1f2;
                         color: #1da1f2;
                         box-shadow: 0px 5px 28.5px 1.5px rgba(29, 161, 242, 0.2);
-                        
                         &:hover {
                             background-color: #1da1f2;
                             color: var(--whiteColor);
@@ -166,10 +167,8 @@
 }
 
 @media only screen and (max-width: 767px) {
-
     .login-image {
         background-image: unset !important;
-
         img {
             display: inline-block;
         }
@@ -177,7 +176,6 @@
     .login-content {
         height: 100%;
         padding: 60px 15px;
-
         .login-form {
             .logo {
                 margin-bottom: 25px;
@@ -187,24 +185,22 @@
             }
         }
     }
-
 }
-@media only screen and (min-width: 576px) and (max-width: 767px) {
 
+@media only screen and (min-width: 576px) and (max-width: 767px) {
     .login-content {
         max-width: 548px;
         margin: {
             left: auto;
             right: auto;
-        };
+        }
+        ;
     }
-
 }
-@media only screen and (min-width: 768px) and (max-width: 991px) {
 
+@media only screen and (min-width: 768px) and (max-width: 991px) {
     .login-image {
         background-image: none !important;
-
         img {
             display: inline-block;
         }
@@ -214,13 +210,11 @@
         padding: {
             top: 80px;
             bottom: 80px;
-        };
+        }
+        ;
     }
-
 }
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
 
-}
-@media only screen and (min-width: 1200px) and (max-width: 1275px) {
+@media only screen and (min-width: 992px) and (max-width: 1199px) {}
 
-}
+@media only screen and (min-width: 1200px) and (max-width: 1275px) {}

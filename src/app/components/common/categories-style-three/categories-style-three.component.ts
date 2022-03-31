@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProjectCategoryService } from '../../pages/admin/admin-dashboard/project/services/project-category.service';
 
 @Component({
   selector: 'app-categories-style-three',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CategoriesStyleThreeComponent implements OnInit {
 
-  constructor() { }
+  categories=[];
+
+  constructor(private projectCategoryService: ProjectCategoryService) { }
 
   ngOnInit(): void {
+    this.projectCategoryService.categories().subscribe((data:any)=>{
+       this.categories = data;
+    },(error)=>{
+      console.log(error);
+    });
   }
 
 }

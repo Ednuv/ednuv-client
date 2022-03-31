@@ -4,21 +4,25 @@
     z-index: 1;
     padding: {
         top: 100px;
-    };
+    }
+    ;
 }
+
 .banner-wrapper-content {
     text-align: center;
     max-width: 650px;
     margin: {
         left: auto;
         right: auto;
-    };
+    }
+    ;
     h1 {
         margin-bottom: 20px;
         font: {
             size: 40px;
             weight: 600;
-        };
+        }
+        ;
     }
     p {
         font-size: 16px;
@@ -28,12 +32,12 @@
             left: auto;
             right: auto;
             bottom: 0;
-        };
+        }
+        ;
     }
     form {
         position: relative;
         margin-top: 30px;
-
         .input-search {
             display: block;
             width: 100%;
@@ -45,7 +49,6 @@
             outline: 0;
             color: var(--blackColor);
             box-shadow: 0px 5px 28.5px 1.5px rgba(149, 152, 200, 0.2) !important;
-
             &::placeholder {
                 transition: var(--transition);
                 color: var(--paragraphColor);
@@ -71,20 +74,23 @@
             font: {
                 size: var(--fontSize);
                 weight: 600;
-            };
-            &:hover, &:focus {
+            }
+            ;
+            &:hover,
+            &:focus {
                 background-color: var(--optionalColor);
                 color: var(--whiteColor);
             }
         }
     }
 }
+
 .banner-wrapper-image {
     margin-top: 50px;
+    max-height: 200px;
 }
 
 @media only screen and (max-width: 767px) {
-    
     .main-banner-wrapper {
         padding-top: 75px;
     }
@@ -106,8 +112,8 @@
                 font-size: 15px;
                 margin-top: 15px;
                 box-shadow: 0 5px 28.5px 1.5px rgba(255, 25, 73, 0.2);
-
-                &:hover, &:focus {
+                &:hover,
+                &:focus {
                     box-shadow: 0 5px 28.5px 1.5px rgba(14, 181, 130, 0.2);
                 }
             }
@@ -116,17 +122,12 @@
     .banner-wrapper-image {
         margin-top: 35px;
     }
-
 }
-@media only screen and (min-width: 576px) and (max-width: 767px) {
 
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (min-width: 576px) and (max-width: 767px) {}
 
-}
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
+@media only screen and (min-width: 768px) and (max-width: 991px) {}
 
-}
-@media only screen and (min-width: 1200px) and (max-width: 1275px) {
+@media only screen and (min-width: 992px) and (max-width: 1199px) {}
 
-}
+@media only screen and (min-width: 1200px) and (max-width: 1275px) {}

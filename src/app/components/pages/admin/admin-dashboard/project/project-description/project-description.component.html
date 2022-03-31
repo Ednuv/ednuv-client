@@ -1,0 +1,125 @@
+<!--<mat-card>
+    <mat-card-content>
+        <div class="bootstrap-wrapper">
+            <div class="row">
+                <div class="col-md-8 offset-md-3">
+                    <form (ngSubmit)="formSubmit()">
+                        <mat-form-field class="w100" appearance="outline">
+                            <mat-label>Title </mat-label>
+                            <input [(ngModel)]="quizData.title" required type="text" name="title" matInput placeholder="Enter here" />
+                        </mat-form-field>
+                        <mat-form-field class="w100" appearance="outline">
+                            <mat-label>Description </mat-label>
+                            <textarea [(ngModel)]="quizData.description" name="description" matInput placeholder="Enter Category description" row="20"></textarea>
+                        </mat-form-field>
+                        <mat-form-field class="w100" appearance="outline">
+                            <mat-label>Short Description </mat-label>
+                            <textarea [(ngModel)]="quizData.shortdescription" required name="Short Descriptions" matInput placeholder="Enter here"></textarea>
+                        </mat-form-field>
+                        <mat-form-field class="w100" appearance="outline">
+                            <mat-label>Cost </mat-label>
+                            <input [(ngModel)]="quizData.cost" required type="text" name="Cost" matInput placeholder="Enter here" />
+                        </mat-form-field>
+                        <mat-form-field class="w100" appearance="outline">
+                            <mat-label>Author </mat-label>
+                            <input [(ngModel)]="quizData.Author" required type="text" name="Author" matInput placeholder="Enter here" />
+                        </mat-form-field>
+                        <mat-form-field class="w100" appearance="outline">
+                            <mat-label>ProjectLength </mat-label>
+                            <input [(ngModel)]="quizData.projectLength" required type="text" name="projectLength" matInput placeholder="Enter here" />
+                        </mat-form-field>
+                        <mat-form-field class="w100" appearance="outline">
+                            <mat-label>Github </mat-label>
+                            <input [(ngModel)]="quizData.github" type="text" name="github" matInput placeholder="Enter here" />
+                        </mat-form-field>
+                        <mat-form-field class="w100" appearance="outline">
+                            <mat-label>WhatsApp </mat-label>
+                            <input [(ngModel)]="quizData.WhatsApp" type="text" name="WhatsApp" matInput placeholder="Enter here" />
+                        </mat-form-field>
+                        <mat-form-field class="w100" appearance="outline">
+                            <mat-label>Requirements </mat-label>
+                            <input [(ngModel)]="quizData.requirements" type="text" name="requirements" matInput placeholder="Enter here" />
+                        </mat-form-field>
+                        <mat-form-field class="w100" appearance="outline">
+                            <mat-label>Level </mat-label>
+                            <input [(ngModel)]="quizData.level" type="text" name="level" matInput placeholder="Enter here" />
+                        </mat-form-field>
+                        <mat-form-field class="w100" appearance="outline">
+                            <mat-label>Related Quiz </mat-label>
+                            <input [(ngModel)]="quizData.relatedquiz" type="text" name="relatedquiz" matInput placeholder="Enter here" />
+                        </mat-form-field>
+                        <mat-form-field class="w100" appearance="outline">
+                            <mat-label>Active</mat-label>
+                            <input [(ngModel)]="quizData.active" type="text" name="active" matInput placeholder="Enter here" />
+                        </mat-form-field>
+
+                        <mat-form-field appearance="fill">
+                            <mat-label>Project Category</mat-label>
+                            <mat-select [(ngModel)]="quizData.category.cid" name="category">
+                                <mat-option *ngFor="let c of categories" [value]="c.cid">
+                                    {{c.title}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                        <div class="container text-center mt-20">
+                            <button mat-raised-button color="accent">Add New Project</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card> !-->
+
+<form (ngSubmit)="formSubmit()">
+    <div class="form-group">
+        <input [(ngModel)]="quizData.title" type="text" name="title" id="title" placeholder="Project title" class="form-control">
+    </div>
+    <div class="form-group">
+        <input [(ngModel)]="quizData.description" type="text" name="description" id="description" placeholder="Enter Decription" class="form-control">
+    </div>
+    <div class="form-group">
+        <input [(ngModel)]="quizData.shortdescription" type="text" name="FirstName" id="firstName" placeholder="Enter Short Decription" class="form-control">
+    </div>
+    <div class="form-group">
+        <input [(ngModel)]="quizData.cost" type="text" name="cost" id="cost" placeholder="Enter cost" class="form-control">
+    </div>
+    <div class="form-group">
+        <input [(ngModel)]="quizData.author" type="text" name="author" id="author" placeholder="Enter Author" class="form-control">
+    </div>
+    <div class="form-group">
+        <input [(ngModel)]="quizData.projectLength" type="text" name="projectLength" id="projectLength" placeholder="Enter Project Length" class="form-control">
+    </div>
+    <div class="form-group">
+        <input [(ngModel)]="quizData.github" type="text" name="github" id="github" placeholder="Enter github" class="form-control">
+    </div>
+    <div class="form-group">
+        <input [(ngModel)]="quizData.whatsApp" type="text" name="whatsApp" id="whatsApp" placeholder="Enter WhatsApp" class="form-control">
+    </div>
+    <div class="form-group">
+        <input [(ngModel)]="quizData.level" type="text" name="level" id="level" placeholder="Enter level" class="form-control">
+    </div>
+    <div class="form-group">
+        <input [(ngModel)]="quizData.requirements" type="text" name="requirements" id="level" placeholder="Enter requirements" class="form-control">
+    </div>
+    <div class="form-group">
+        <input [(ngModel)]="quizData.relatedquiz" type="text" name="relatedquiz" id="level" placeholder="Enter relatedquiz" class="form-control">
+    </div>
+    <div class="form-group">
+        <input [(ngModel)]="quizData.active" type="text" name="active" id="active" placeholder="Enter active" class="form-control">
+    </div>
+    <div class="form-group">
+        <div class="col-md-6">
+            <input type="file" (change)=onFileChanged($event) name="projectpic" id="projectpic" class="form-control">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-6">
+            <select [(ngModel)]="quizData.category.cid" name="category" id="category">
+                 <option *ngFor="let c of categories" [value]="c.cid">{{c.title}}</option>
+          </select>
+        </div>
+    </div>
+
+    <button type="submit">Sign Up</button>
+</form>

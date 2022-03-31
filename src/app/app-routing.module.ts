@@ -53,6 +53,11 @@ import {QuizMainComponent} from './components/pages/quiz/quiz-main/quiz-main.com
 import {QuizListComponent} from './components/pages/quiz/quiz-list/quiz-list.component';
 import {PreStartComponent} from './components/pages/quiz/pre-start/pre-start.component';
 import {QuizStartComponent} from './components/pages/quiz/quiz-start/quiz-start.component';
+import { ProjectCategoriesComponent } from './components/pages/admin/admin-dashboard/project/project-categories/project-categories.component';
+import { ProjectDescriptionComponent } from './components/pages/admin/admin-dashboard/project/project-description/project-description.component';
+import {ProjectComponent} from './components/pages/admin/admin-dashboard/project/project.component';
+import {ProjectDisplayComponent} from './components/pages/project/project-display/project-display.component';
+import {ProjectDetailComponent} from './components/pages/project/project-detail/project-detail.component';
 const routes: Routes = [
     {path: '', component: HomePageSixComponent},
     {path: 'about-style-2', component: AboutPageTwoComponent},
@@ -120,10 +125,25 @@ const routes: Routes = [
 
      ],
     },
+  {path: 'project-admin', component: ProjectComponent,
+    canActivate:[AdminGuard],
+     children:[
+      {
+        path:'projectcategories-admin',
+        component: ProjectCategoriesComponent
+      },
+      {
+        path:'projectdescription-admin',
+        component: ProjectDescriptionComponent
+      },
+     ],
+    },
   {path: 'quiz-main', component: QuizMainComponent},
   {path: 'quiz-pre-start/:qid', component: PreStartComponent},
   {path: 'quiz-start/:qid', component: QuizStartComponent},
   {path: 'quiz-list/:cId', component: QuizListComponent},
+  {path: 'project-display/:cid', component: ProjectDisplayComponent},
+  {path: 'project-detail/:cid', component: ProjectDetailComponent},
     {path: 'admin-dashboard', component: AdminDashboardComponent,canActivate:[AdminGuard]},
     {path: '**', component: ErrorPageComponent},
     

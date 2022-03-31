@@ -103,6 +103,13 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { HomesixAboutComponent } from './components/pages/home-page-six/homesix-about/homesix-about.component';
 import { HomesixCoursesComponent } from './components/pages/home-page-six/homesix-courses/homesix-courses.component';
 import { HomesixMainBannerComponent } from './components/pages/home-page-six/homesix-main-banner/homesix-main-banner.component';
+import { ProjectCategoriesComponent } from './components/pages/admin/admin-dashboard/project/project-categories/project-categories.component';
+import { ProjectDescriptionComponent } from './components/pages/admin/admin-dashboard/project/project-description/project-description.component';
+import {ProjectComponent} from './components/pages/admin/admin-dashboard/project/project.component';
+import { ProjectDisplayComponent } from './components/pages/project/project-display/project-display.component';
+import { ProjectDetailComponent } from './components/pages/project/project-detail/project-detail.component';
+import { NgxMatFileInputModule } from '@angular-material-components/file-input';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
   declarations: [
     AppComponent,
@@ -186,7 +193,13 @@ import { HomesixMainBannerComponent } from './components/pages/home-page-six/hom
     QuizStartComponent,
     HomesixAboutComponent,
     HomesixCoursesComponent,
-    HomesixMainBannerComponent
+    HomesixMainBannerComponent,
+    ProjectCategoriesComponent,
+    ProjectDescriptionComponent,
+    ProjectComponent,
+    ProjectDisplayComponent,
+    ProjectDetailComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -210,7 +223,9 @@ import { HomesixMainBannerComponent } from './components/pages/home-page-six/hom
     MatProgressSpinnerModule,
     NgxUiLoaderModule,
     NgxUiLoaderHttpModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    NgxMatFileInputModule,
+    NgbModule
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
