@@ -5,6 +5,8 @@
     .courses-image {
         position: relative;
         overflow: hidden;
+        height: 300px;
+        width: 350px;
         a {
             img {
                 transition: var(--transition);

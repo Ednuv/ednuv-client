@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { ProjectCategoryService } from '../services/project-category.service';
 import { ProjectDescriptionService } from '../services/project-description.service';
-
+import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 @Component({
   selector: 'app-project-description',
   templateUrl: './project-description.component.html',
   styleUrls: ['./project-description.component.scss']
 })
 export class ProjectDescriptionComponent implements OnInit {
-
+  public Editor = ClassicEditor;
   qId;
   qtitle;
   categories =[];

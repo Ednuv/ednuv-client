@@ -1,0 +1,32 @@
+<form (ngSubmit)="formSubmit()">
+    <div class="form-group">
+        <input [(ngModel)]="blogData.title" type="text" name="title" id="title" placeholder="Blog title" class="form-control">
+    </div>
+    <div class="form-group">
+        <input [(ngModel)]="blogData.subtitle" type="text" name="subtitle" id="subtitle" placeholder="Enter Subtitle" class="form-control">
+    </div>
+    <div class="form-group">
+        <input [(ngModel)]="blogData.introduction" type="text" name="Introduction" id="introduction" placeholder="Enter Blog Introduction" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <input [(ngModel)]="blogData.conclusion" type="text" name="conclusion" id="conclusion" placeholder="Enter Conclusion" class="form-control">
+    </div>
+    <div class="form-group">
+        <input [(ngModel)]="blogData.author" type="text" name="author" id="author" placeholder="Enter Author" class="form-control">
+    </div>
+    <div class="form-group">
+        <input [(ngModel)]="blogData.relatedvideo" type="text" name="relatedvideo" id="relatedvideo" placeholder="Enter relatedvideo" class="form-control">
+    </div>
+    <div class="form-group">
+        <div class="col-md-6">
+            <input type="file" (change)=onFileChanged($event) name="projectpic" id="projectpic" class="form-control">
+        </div>
+    </div>
+    <div class="form-group">
+        <!--  <input [(ngModel)]="blogData.description" type="text" name="description" id="description" placeholder="Enter description" class="form-control"> -->
+        <ckeditor [editor]="Editor" data="Enter description" name="description" [(ngModel)]="blogData.description" class="form-control"></ckeditor>
+    </div>
+
+    <button type="submit">Submit Blog</button>
+</form>

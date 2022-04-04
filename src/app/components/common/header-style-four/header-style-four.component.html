@@ -76,7 +76,7 @@
                     </ul>
                     <a *ngIf="!isLoggedIn" routerLink="/login" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Login</a>
                     <a *ngIf="!isLoggedIn" routerLink="/register" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Register</a>
-                    <a *ngIf="isLoggedIn" routerLink="/" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">{{user.firstName}}</a>
+                    <a *ngIf="isLoggedIn" routerLink="/my-dashboard" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">{{user.firstName}}</a>
                     <a (click)="logout()" *ngIf="isLoggedIn" routerLink="/" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Logout</a>
                 </div>
             </nav>

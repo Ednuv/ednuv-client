@@ -75,9 +75,9 @@
     <div class="form-group">
         <input [(ngModel)]="quizData.title" type="text" name="title" id="title" placeholder="Project title" class="form-control">
     </div>
-    <div class="form-group">
+    <!--  <div class="form-group">
         <input [(ngModel)]="quizData.description" type="text" name="description" id="description" placeholder="Enter Decription" class="form-control">
-    </div>
+    </div> -->
     <div class="form-group">
         <input [(ngModel)]="quizData.shortdescription" type="text" name="FirstName" id="firstName" placeholder="Enter Short Decription" class="form-control">
     </div>
@@ -120,6 +120,8 @@
           </select>
         </div>
     </div>
-
+    <div class="form-group">
+        <ckeditor [editor]="Editor" placeholder="Enter Description" data="Enter description" name="description" [(ngModel)]="quizData.description" class="form-control"></ckeditor>
+    </div>
     <button type="submit">Sign Up</button>
 </form>

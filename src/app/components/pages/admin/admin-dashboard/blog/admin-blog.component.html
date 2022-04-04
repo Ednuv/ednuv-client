@@ -1,6 +1,6 @@
 <app-header-style-four></app-header-style-four>
 
-<div class="page-title-area page-title-style-three item-bg1">
+<div class="page-title-area item-bg1">
     <div class="container">
         <div class="page-title-content">
             <ul>
@@ -23,12 +23,16 @@
                 </div>
                 <div class="col-lg-8 col-md-7">
                     <div class="profile-content">
-                        <h3>{{user.firstName}} {{user.lastName}}</h3>
+                        <h3>Raju</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore atque officiis maxime suscipit expedita obcaecati nulla in ducimus.</p>
                         <ul class="contact-info">
                             <li><i class='bx bx-envelope'></i> <a href="mailto:hello@jamesanderson.com">hello@jamesanderson.com</a></li>
-                            <li><i class='bx bx-phone'></i> <a href="tel:+502464674">{{user.phone}}</a></li>
-                            <li><i class='bx bx-world'></i> <a href="#" target="_blank">{{user.username}}</a></li>
+                            <li><i class='bx bx-phone'></i>
+                                <a href="tel:+502464674"></a>
+                            </li>
+                            <li><i class='bx bx-world'></i>
+                                <a href="#" target="_blank"></a>
+                            </li>
                         </ul>
                         <ul class="social">
                             <li><a href="#" class="d-block" target="_blank"><i class='bx bxl-facebook'></i></a></li>
@@ -51,7 +55,20 @@
                 <li><a routerLink="/edit-account"><i class='bx bx-edit'></i> Account Details</a></li>
                 <li><a routerLink="/"><i class='bx bx-log-out'></i> Logout</a></li>
             </ul>
-
+            <div class="row">
+                <div class="col-md-3">
+                    <mat-card>
+                        <mat-action-list>
+                            <div mat-subheader>Menu </div>
+                            <button mat-list-item routerLink="/admin-blog/add-blog"> <mat-icon mat-list-icon>home</mat-icon> Add Blog</button>
+                            <button mat-list-item routerLink="/admin-blog/display-blog"> <mat-icon mat-list-icon>account_circle</mat-icon> Show Blog</button>
+                        </mat-action-list>
+                    </mat-card>
+                </div>
+                <div class="col-md-9">
+                    <router-outlet></router-outlet>
+                </div>
+            </div>
         </div>
 
     </div>

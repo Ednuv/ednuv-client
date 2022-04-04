@@ -5,16 +5,19 @@ import baseUrl from 'src/app/components/pages/services/helper';
 @Injectable({
   providedIn: 'root'
 })
-export class ProjectCategoryService {
-  
+export class BlogsService {
+
   constructor(private http:HttpClient) { }
  
-  public categories(){
-    return this.http.get(`${baseUrl}/projectcategory/`);
+  public getBlogs(){
+    return this.http.get(`${baseUrl}/blog/`);
   }
 
-  public addCategory(category){
-     return this.http.post(`${baseUrl}/projectcategory/`,category);
+  public addBlog(blog){
+     return this.http.post(`${baseUrl}/blog/`,blog);
   }
- 
+
+  public getBlog(bid){
+    return this.http.get(`${baseUrl}/blog/`+bid);
+  }
 }

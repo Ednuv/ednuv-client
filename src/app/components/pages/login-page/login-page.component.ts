@@ -39,7 +39,7 @@ export class LoginPageComponent implements OnInit {
             console.log(user); 
             if(this.login.getUserRole()=='Normal'){
             //  window.location.href='/my-dashboard';
-              this.router.navigate(['my-dashboard'])
+              this.router.navigate([''])
             }else if(this.login.getUserRole()=='Admin'){
               this.router.navigate(['admin-dashboard'])
             }else{

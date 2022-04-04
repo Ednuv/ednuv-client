@@ -58,6 +58,9 @@ import { ProjectDescriptionComponent } from './components/pages/admin/admin-dash
 import {ProjectComponent} from './components/pages/admin/admin-dashboard/project/project.component';
 import {ProjectDisplayComponent} from './components/pages/project/project-display/project-display.component';
 import {ProjectDetailComponent} from './components/pages/project/project-detail/project-detail.component';
+import {AdminBlogComponent} from './components/pages/admin/admin-dashboard/blog/admin-blog.component';
+import { AddBlogComponent } from './components/pages/admin/admin-dashboard/blog/add-blog/add-blog.component';
+import { DisplayBlogComponent } from './components/pages/admin/admin-dashboard/blog/display-blog/display-blog.component';
 const routes: Routes = [
     {path: '', component: HomePageSixComponent},
     {path: 'about-style-2', component: AboutPageTwoComponent},
@@ -91,8 +94,8 @@ const routes: Routes = [
     {path: 'edit-shipping-address', component: EditShippingAddressPageComponent},
     {path: 'blog-style-1', component: BlogGridPageComponent},
     {path: 'blog-style-2', component: BlogRightSidebarPageComponent},
+    {path: 'blogdetails/:bId',component: BlogDetailsPageComponent},
     {path: 'blog-style-3', component: BlogFullWidthPageComponent},
-    {path: 'single-blog', component: BlogDetailsPageComponent},
     {path: 'shop-grid', component: ShopGridPageComponent},
     {path: 'shop-grid-fullwidth', component: ShopFullWidthPageComponent},
     {path: 'single-products', component: ProductsDetailsPageComponent},
@@ -135,6 +138,19 @@ const routes: Routes = [
       {
         path:'projectdescription-admin',
         component: ProjectDescriptionComponent
+      },
+     ],
+    },
+    {path: 'admin-blog', component: AdminBlogComponent,
+    canActivate:[AdminGuard],
+     children:[
+      {
+        path:'add-blog',
+        component: AddBlogComponent
+      },
+      {
+        path:'display-blog',
+        component: DisplayBlogComponent
       },
      ],
     },

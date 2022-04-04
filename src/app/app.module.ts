@@ -110,6 +110,10 @@ import { ProjectDisplayComponent } from './components/pages/project/project-disp
 import { ProjectDetailComponent } from './components/pages/project/project-detail/project-detail.component';
 import { NgxMatFileInputModule } from '@angular-material-components/file-input';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { AddBlogComponent } from './components/pages/admin/admin-dashboard/blog/add-blog/add-blog.component';
+import { DisplayBlogComponent } from './components/pages/admin/admin-dashboard/blog/display-blog/display-blog.component';
+import { AdminBlogComponent } from './components/pages/admin/admin-dashboard/blog/admin-blog.component';
+import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 @NgModule({
   declarations: [
     AppComponent,
@@ -199,7 +203,9 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     ProjectComponent,
     ProjectDisplayComponent,
     ProjectDetailComponent,
-
+    AddBlogComponent,
+    DisplayBlogComponent,
+    AdminBlogComponent,
   ],
   imports: [
     BrowserModule,
@@ -225,7 +231,8 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     NgxUiLoaderHttpModule,
     MatSnackBarModule,
     NgxMatFileInputModule,
-    NgbModule
+    NgbModule,
+    CKEditorModule
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
