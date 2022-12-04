@@ -32,13 +32,14 @@ export class LoginPageComponent implements OnInit {
     }
     this.login.generateToken(this.loginData).subscribe(
       (data)=>{
+        console.log(data);
+       // this.login.setUser(data.username);
         this.login.loginUser(data);
         this.login.getCurrentUser().subscribe(
           (user:any)=>{
             this.login.setUser(user);
             console.log(user); 
-            if(this.login.getUserRole()=='Normal'){
-            //  window.location.href='/my-dashboard';
+           if(this.login.getUserRole()=='Normal'){
               this.router.navigate([''])
             }else if(this.login.getUserRole()=='Admin'){
               this.router.navigate(['admin-dashboard'])

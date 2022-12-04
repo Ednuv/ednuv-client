@@ -25,16 +25,16 @@ export class RegisterPageComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  onFileChanged(event){
+  /*onFileChanged(event){
     const file = event.target.files[0];
     this.picByte = file;
     console.log(this.picByte);
-  }
+  }*/
   formSubmit(){
-  
+  console.log(this.user);
    const finaluser=new FormData();
    finaluser.append('user',JSON.stringify(this.user));
-   finaluser.append('file',this.picByte);
+   //finaluser.append('file',this.picByte);
    console.log(finaluser);
    if(this.user.username== '' || this.user.username ==null){
     this._snackBar.open('Username is required','ok',{
@@ -49,7 +49,7 @@ export class RegisterPageComponent implements OnInit {
     
   }
    if(this.user.username!= '' &&  this.user.password!=''){
-    this.userService.addUser(finaluser).subscribe(
+    this.userService.addUser(this.user).subscribe(
       (data) =>{
         console.log(data);
         this.submit= true;

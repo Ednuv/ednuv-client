@@ -13,6 +13,6 @@ export class UserService {
   ) { }
 
   public addUser(user: any){
-     return this.http.post(`${baseUrl}/users/`,user);
+     return this.http.post(`${baseUrl}/api/Account/register/`,user);
   }
 }

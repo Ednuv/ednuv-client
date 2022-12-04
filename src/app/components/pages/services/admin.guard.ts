@@ -8,7 +8,7 @@ import { LoginService } from './login.service';
 })
 export class AdminGuard implements CanActivate {
 
-  constructor(private login:LoginService,private router:Router){
+ constructor(private login:LoginService,private router:Router){
 
   }
   canActivate(

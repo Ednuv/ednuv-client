@@ -13,7 +13,7 @@ export class LoginService {
 
   public generateToken(loginData:any){
 
-    return this.http.post(`${baseUrl}/generate-token`,loginData)
+    return this.http.post(`${baseUrl}/api/Account/login`,loginData)
   }
 
   public getCurrentUser(){
